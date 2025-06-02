@@ -1,0 +1,30 @@
+# Deployment Configuration for revenue-multiplier-engine
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: revenue-multiplier-engine
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: revenue-multiplier-engine
+  template:
+    metadata:
+      labels:
+        app: revenue-multiplier-engine
+    spec:
+      containers:
+      - name: revenue-multiplier-engine
+        image: revenue-multiplier-engine:latest
+        ports:
+        - containerPort: 3000
+        env:
+        - name: NODE_ENV
+          value: "production"
+        resources:
+          requests:
+            memory: "256Mi"
+            cpu: "250m"
+          limits:
+            memory: "512Mi"
+            cpu: "500m"
