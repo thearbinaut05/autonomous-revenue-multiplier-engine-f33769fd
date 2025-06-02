@@ -1,0 +1,25 @@
+{
+  "name": "revenue-multiplier-engine",
+  "version": "1.0.0",
+  "description": "Cross-platform revenue optimization and arbitrage",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js",
+    "deploy": "npm run build && npm run start"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "axios": "^1.4.0",
+    "redis": "^4.6.0"
+  },
+  "keywords": [
+    "autonomous",
+    "ai",
+    "revenue",
+    "automation"
+  ],
+  "license": "MIT"
+}
